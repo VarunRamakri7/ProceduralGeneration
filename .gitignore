@@ -60,4 +60,4 @@
 
 # misc. files
 **/*.pdf
-
+**/*.pdf.meta
