@@ -8,14 +8,12 @@ namespace Completed
 	{
 		public float moveTime = 0.1f;			//Time it will take object to move, in seconds.
 		public LayerMask blockingLayer;			//Layer on which collision will be checked.
-		
-		
+
 		private BoxCollider2D boxCollider; 		//The BoxCollider2D component attached to this object.
 		private Rigidbody2D rb2D;				//The Rigidbody2D component attached to this object.
 		private float inverseMoveTime;			//Used to make movement more efficient.
 		private bool isMoving;					//Is the object currently moving.
-		
-		
+
 		//Protected, virtual functions can be overridden by inheriting classes.
 		protected virtual void Start ()
 		{
@@ -28,8 +26,7 @@ namespace Completed
 			//By storing the reciprocal of the move time we can use it by multiplying instead of dividing, this is more efficient.
 			inverseMoveTime = 1f / moveTime;
 		}
-		
-		
+
 		//Move returns true if it is able to move and false if not. 
 		//Move takes parameters for x direction, y direction and a RaycastHit2D to check collision.
 		protected bool Move (int xDir, int yDir, out RaycastHit2D hit)
@@ -62,8 +59,7 @@ namespace Completed
 			//If something was hit, return false, Move was unsuccesful.
 			return false;
 		}
-		
-		
+
 		//Co-routine for moving units from one space to next, takes a parameter end to specify where to move to.
 		protected IEnumerator SmoothMovement (Vector3 end)
 		{
@@ -96,8 +92,7 @@ namespace Completed
 			//The object is no longer moving.
 			isMoving = false;
 		}
-		
-		
+
 		//The virtual keyword means AttemptMove can be overridden by inheriting classes using the override keyword.
 		//AttemptMove takes a generic parameter T to specify the type of component we expect our unit to interact with if blocked (Player for Enemies, Wall for Player).
 		protected virtual void AttemptMove <T> (int xDir, int yDir)
@@ -123,8 +118,7 @@ namespace Completed
 				//Call the OnCantMove function and pass it hitComponent as a parameter.
 				OnCantMove (hitComponent);
 		}
-		
-		
+
 		//The abstract modifier indicates that the thing being modified has a missing or incomplete implementation.
 		//OnCantMove will be overriden by functions in the inheriting classes.
 		protected abstract void OnCantMove <T> (T component)

@@ -10,16 +10,13 @@ namespace Completed
 		public Sprite dmgSprite;					//Alternate sprite to display after Wall has been attacked by player.
 		public int hp = 3;							//hit points for the wall.
 		
-		
 		private SpriteRenderer spriteRenderer;		//Store a component reference to the attached SpriteRenderer.
-		
-		
+				
 		void Awake ()
 		{
 			//Get a component reference to the SpriteRenderer.
 			spriteRenderer = GetComponent<SpriteRenderer> ();
 		}
-		
 		
 		//DamageWall is called when the player attacks a wall.
 		public void DamageWall (int loss)
@@ -35,8 +32,7 @@ namespace Completed
 			
 			//If hit points are less than or equal to zero:
 			if(hp <= 0)
-				//Disable the gameObject.
-				gameObject.SetActive (false);
-		}
+				gameObject.SetActive (false); //Disable the gameObject.
+        }
 	}
 }

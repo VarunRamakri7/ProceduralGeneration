@@ -26,8 +26,7 @@ namespace Completed
 #if UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
         private Vector2 touchOrigin = -Vector2.one;	//Used to store location of screen touch origin for mobile controls.
 #endif
-		
-		
+
 		//Start overrides the Start function of MovingObject
 		protected override void Start ()
 		{
@@ -43,16 +42,14 @@ namespace Completed
 			//Call the Start function of the MovingObject base class.
 			base.Start ();
 		}
-		
-		
+
 		//This function is called when the behaviour becomes disabled or inactive.
 		private void OnDisable ()
 		{
 			//When Player object is disabled, store the current local food total in the GameManager so it can be re-loaded in next level.
 			GameManager.instance.playerFoodPoints = food;
 		}
-		
-		
+
 		private void Update ()
 		{
 			//If it's not the player's turn, exit the function.
@@ -156,7 +153,6 @@ namespace Completed
 			GameManager.instance.playersTurn = false;
 		}
 		
-		
 		//OnCantMove overrides the abstract function OnCantMove in MovingObject.
 		//It takes a generic parameter T which in the case of Player is a Wall which the player can attack and destroy.
 		protected override void OnCantMove <T> (T component)
@@ -170,7 +166,6 @@ namespace Completed
 			//Set the attack trigger of the player's animation controller in order to play the player's attack animation.
 			animator.SetTrigger ("playerChop");
 		}
-		
 		
 		//OnTriggerEnter2D is sent when another object enters a trigger collider attached to this object (2D physics only).
 		private void OnTriggerEnter2D (Collider2D other)
@@ -217,8 +212,7 @@ namespace Completed
 				other.gameObject.SetActive (false);
 			}
 		}
-		
-		
+
 		//Restart reloads the scene when called.
 		private void Restart ()
 		{
@@ -226,8 +220,7 @@ namespace Completed
             //and not load all the scene object in the current scene.
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
 		}
-		
-		
+
 		//LoseFood is called when an enemy attacks the player.
 		//It takes a parameter loss which specifies how many points to lose.
 		public void LoseFood (int loss)
@@ -244,8 +237,7 @@ namespace Completed
 			//Check to see if game has ended.
 			CheckIfGameOver ();
 		}
-		
-		
+
 		//CheckIfGameOver checks if the player is out of food points and if so, ends the game.
 		private void CheckIfGameOver ()
 		{
@@ -264,4 +256,3 @@ namespace Completed
 		}
 	}
 }
-
