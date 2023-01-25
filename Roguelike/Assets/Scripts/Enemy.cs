@@ -9,13 +9,11 @@ namespace Completed
 		public int playerDamage; 							//The amount of food points to subtract from the player when attacking.
 		public AudioClip attackSound1;						//First of two audio clips to play when attacking the player.
 		public AudioClip attackSound2;						//Second of two audio clips to play when attacking the player.
-		
-		
+
 		private Animator animator;							//Variable of type Animator to store a reference to the enemy's Animator component.
 		private Transform target;							//Transform to attempt to move toward each turn.
 		private bool skipMove;								//Boolean to determine whether or not enemy should skip a turn or move this turn.
-		
-		
+
 		//Start overrides the virtual Start function of the base class.
 		protected override void Start ()
 		{
@@ -32,8 +30,7 @@ namespace Completed
 			//Call the start function of our base class MovingObject.
 			base.Start ();
 		}
-		
-		
+
 		//Override the AttemptMove function of MovingObject to include functionality needed for Enemy to skip turns.
 		//See comments in MovingObject for more on how base AttemptMove function works.
 		protected override void AttemptMove <T> (int xDir, int yDir)
@@ -43,7 +40,6 @@ namespace Completed
 			{
 				skipMove = false;
 				return;
-				
 			}
 			
 			//Call the AttemptMove function from MovingObject.
@@ -52,7 +48,6 @@ namespace Completed
 			//Now that Enemy has moved, set skipMove to true to skip next move.
 			skipMove = true;
 		}
-		
 		
 		//MoveEnemy is called by the GameManger each turn to tell each Enemy to try to move towards the player.
 		public void MoveEnemy ()
