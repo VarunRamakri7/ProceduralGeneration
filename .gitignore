@@ -58,3 +58,6 @@
 # Crashlytics generated file
 **/crashlytics-build.properties
 
+# misc. files
+**/.pdf
+
