@@ -4,9 +4,7 @@ using System.Collections.Generic; 		//Allows us to use Lists.
 using Random = UnityEngine.Random; 		//Tells Random to use the Unity Engine random number generator.
 
 namespace Completed
-	
 {
-	
 	public class BoardManager : MonoBehaviour
 	{
 		// Using Serializable allows us to embed a class with sub properties in the inspector.
@@ -15,8 +13,7 @@ namespace Completed
 		{
 			public int minimum; 			//Minimum value for our Count class.
 			public int maximum; 			//Maximum value for our Count class.
-			
-			
+
 			//Assignment constructor.
 			public Count (int min, int max)
 			{
@@ -24,8 +21,7 @@ namespace Completed
 				maximum = max;
 			}
 		}
-		
-		
+
 		public int columns = 8; 										//Number of columns in our game board.
 		public int rows = 8;											//Number of rows in our game board.
 		public Count wallCount = new Count (5, 9);						//Lower and upper limit for our random number of walls per level.
