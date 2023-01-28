@@ -22,6 +22,6 @@ public class S_GenerateSniper : S_Weapon
     // Start is called before the first frame update
     void Start()
     {
-        weaponType = Type.AR;
+        weaponType = Type.SNIPER;
     }
 }

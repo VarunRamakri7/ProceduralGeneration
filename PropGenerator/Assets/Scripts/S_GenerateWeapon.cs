@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class S_GenerateWeapon : S_Weapon
 {
+    [SerializeField]
+    private S_GenerateAR generateAR;
+    [SerializeField]
+    private S_GenerateCrossbow generateCrossbow;
+    [SerializeField]
+    private S_GenerateSniper generateSniper;
+
     private GameObject gunParent;
     private Type genType;
 

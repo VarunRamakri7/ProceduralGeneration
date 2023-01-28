@@ -9,8 +9,8 @@ public enum Type
     //PISTOL,
     AR,
     //GRENADE,
-    SNIPER,
-    CROSSBOW
+    CROSSBOW,
+    SNIPER
     //SMG
 };
 
