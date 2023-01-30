@@ -24,4 +24,13 @@ public class S_GenerateAR : S_Weapon
     {
         weaponType = Type.AR;
     }
+
+    public override GameObject Generate()
+    {
+        Debug.Log("Generating AR");
+
+        GameObject ar = bodies[Random.Range(0, bodies.Count)];
+
+        return ar;
+    }
 }

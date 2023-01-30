@@ -24,4 +24,13 @@ public class S_GenerateSniper : S_Weapon
     {
         weaponType = Type.SNIPER;
     }
+
+    public override GameObject Generate()
+    {
+        Debug.Log("Generating Sniper");
+
+        GameObject sniper = bodies[Random.Range(0, bodies.Count)];
+
+        return sniper;
+    }
 }

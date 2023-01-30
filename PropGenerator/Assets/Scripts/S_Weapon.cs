@@ -17,4 +17,13 @@ public enum Type
 public class S_Weapon : MonoBehaviour
 {
     protected Type weaponType;
+
+    /// <summary>
+    /// Generate wepon
+    /// </summary>
+    /// <returns>Generated weapon</returns>
+    public virtual GameObject Generate()
+    {
+        return new GameObject();
+    }
 }
