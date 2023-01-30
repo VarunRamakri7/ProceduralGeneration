@@ -12,12 +12,14 @@ public class S_GenerateWeapon : S_Weapon
     private S_GenerateSniper generateSniper;
 
     private GameObject gunParent;
+    GameObject weapon;
     private Type genType;
 
     // Start is called before the first frame update
     void Start()
     {
         gunParent = this.gameObject;
+        weapon = null;
         genType = Type.NONE;
     }
 
@@ -26,12 +28,15 @@ public class S_GenerateWeapon : S_Weapon
     /// </summary>
     public void GenerateGun()
     {
-        genType = (Type)Random.Range(1, 3); // Choose a weapon type randomly
+        if (weapon != null)
+        {
+            Destroy(weapon);
+            weapon = null;
+        }
 
-        genType = Type.CROSSBOW;
+        genType = (Type)Random.Range(1, 3); // Choose a weapon type randomly
         Debug.Log("Random type: " + genType.ToString());
 
-        GameObject weapon = null;
         switch(genType)
         {
             case Type.AR:

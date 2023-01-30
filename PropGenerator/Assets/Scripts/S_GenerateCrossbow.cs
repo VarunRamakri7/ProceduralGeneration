@@ -37,19 +37,19 @@ public class S_GenerateCrossbow : S_Weapon
         // Get a grip and attach it to the body
         GameObject grip = Instantiate(grips[Random.Range(0, grips.Count)]); // Randomly select a grip
         Transform gripPoint = crossbow.transform.Find("Grip_Point"); // Get grip attach point
-        grip.transform.parent = crossbow.transform; // Set the crossbow as the grip's parent
+        grip.transform.parent = gripPoint.transform; // Set the crossbow as the grip's parent
         grip.transform.position = gripPoint.position; // Update the grip's position
 
         // Get a sight and attach it to the body
         GameObject sight = Instantiate(sights[Random.Range(0, sights.Count)]); // Randomly select a grip
         Transform sightPoint = crossbow.transform.Find("Sight_Point"); // Get sight attach point
-        sight.transform.parent = crossbow.transform; // Set the crossbow as the sight's parent
+        sight.transform.parent = sightPoint.transform; // Set the crossbow as the sight's parent
         sight.transform.position = sightPoint.position; // Update the sight's position
 
-        // Get a sight and attach it to the body
+        // Get a stock and attach it to the body
         GameObject stock = Instantiate(stocks[Random.Range(0, stocks.Count)]); // Randomly select a stock
         Transform stockPoint = crossbow.transform.Find("Stock_Point"); // Get stock attach point
-        stock.transform.parent = crossbow.transform; // Set the crossbow as the stock's parent
+        stock.transform.parent = stockPoint.transform; // Set the crossbow as the stock's parent
         stock.transform.position = stockPoint.position; // Update the stock's position
 
         return crossbow;
