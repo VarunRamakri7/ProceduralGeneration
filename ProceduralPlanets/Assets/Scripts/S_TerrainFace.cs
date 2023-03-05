@@ -38,27 +38,27 @@ public class S_TerrainFace
         int triangleIndex = 0;
 
         // Compute vertex
-        for(int i = 0; i < resolution; i++)
+        for(int y = 0; y < resolution; y++)
         {
-            for(int j = 0; j < resolution; j++)
+            for(int x = 0; x < resolution; x++)
             {
-                int index = j + i * resolution;
-                Vector2 percent = new Vector2(j, i) / (resolution - 1);
-                Vector3 pointOnUnitCube = localUp + (percent.x - 0.5f) * 2 * axisA + (percent.y - 0.5f) * axisB;
+                int index = x + y * resolution;
+                Vector2 percent = new Vector2(x, y) / (resolution - 1);
+                Vector3 pointOnUnitCube = localUp + (percent.x - 0.5f) * 2.0f * axisA + (percent.y - 0.5f) * 2.0f * axisB;
                 vertices[index] = pointOnUnitCube;
 
                 // Make triangles
-                if (j != (resolution - 1) && i != (resolution - 1))
+                if (x != (resolution - 1) && y != (resolution - 1))
                 {
                     // First triangle
-                    triangles[triangleIndex] = i;
-                    triangles[triangleIndex + 1] = i + resolution + 1;
-                    triangles[triangleIndex + 2] = i + resolution;
+                    triangles[triangleIndex] = index;
+                    triangles[triangleIndex + 1] = index + resolution + 1;
+                    triangles[triangleIndex + 2] = index + resolution;
 
                     // Second triangle
-                    triangles[triangleIndex + 3] = i;
-                    triangles[triangleIndex + 4] = i + 1;
-                    triangles[triangleIndex + 5] = i + resolution + 1;
+                    triangles[triangleIndex + 3] = index;
+                    triangles[triangleIndex + 4] = index + 1;
+                    triangles[triangleIndex + 5] = index + resolution + 1;
 
                     triangleIndex += 6;
                 }
