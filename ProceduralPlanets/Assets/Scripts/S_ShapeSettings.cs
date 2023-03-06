@@ -6,5 +6,4 @@ using UnityEngine;
 public class S_ShapeSettings : ScriptableObject
 {
     public float planetRadius = 1.0f;
-
 }

@@ -6,20 +6,21 @@ public class S_Planet : MonoBehaviour
 {
     [Range(2, 256)]
     public int resolution = 10;
+    public bool autoUpdate = true;
 
     public S_ShapeSettings shapeSettings;
     public S_ColorSettings colorSettings;
+
+    [HideInInspector]
+    public bool shapeSettingsFoldout;
+    [HideInInspector]
+    public bool colorSettingsFoldout;
 
     [SerializeField, HideInInspector]
     private MeshFilter[] meshFilters;
     private S_TerrainFace[] terrainFaces;
 
     private S_ShapeGenerator shapeGenerator;
-
-    private void OnValidate()
-    {
-        GeneratePlanet();
-    }
 
     public void Init()
     {
@@ -34,7 +35,7 @@ public class S_Planet : MonoBehaviour
 
         Vector3[] dir = { Vector3.up, Vector3.down, Vector3.left, Vector3.right, Vector3.forward, Vector3.back };
 
-        for(int i = 0; i < 6; i++)
+        for (int i = 0; i < 6; i++)
         {
             if (meshFilters[i] == null)
             {
@@ -50,18 +51,33 @@ public class S_Planet : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Reinit and generate mesh if shape settings are updated
+    /// </summary>
     public void OnShapeSettingsUpdated()
     {
-        Init();
-        GenerateMesh();
+        if (autoUpdate)
+        {
+            Init();
+            GenerateMesh();
+        }
     }
 
+    /// <summary>
+    /// Reinit and generate colors if color settings are updated
+    /// </summary>
     public void OnColorSettingsUpdated()
     {
-        Init();
-        GenerateColors();
+        if (autoUpdate)
+        {
+            Init();
+            GenerateColors();
+        }
     }
 
+    /// <summary>
+    /// Initialize, generate mesh, and colors
+    /// </summary>
     public void GeneratePlanet()
     {
         Init();
@@ -69,6 +85,9 @@ public class S_Planet : MonoBehaviour
         GenerateColors();
     }
 
+    /// <summary>
+    /// Generate mesh for all terrain faces
+    /// </summary>
     public void GenerateMesh()
     {
         foreach(S_TerrainFace face in terrainFaces)
@@ -77,6 +96,9 @@ public class S_Planet : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Generate colors for all mesh filter materials
+    /// </summary>
     public void GenerateColors()
     {
         foreach(MeshFilter m in meshFilters)

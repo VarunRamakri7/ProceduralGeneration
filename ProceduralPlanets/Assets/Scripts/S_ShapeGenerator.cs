@@ -11,6 +11,11 @@ public class S_ShapeGenerator
         this.settings = settings;
     }
 
+    /// <summary>
+    /// Calculate point on planet when given a point on a unit sphere
+    /// </summary>
+    /// <param name="pointOnUnitSphere"></param>
+    /// <returns>Point on planet</returns>
     public Vector3 CalculatePointOnPlanet(Vector3 pointOnUnitSphere)
     {
         return pointOnUnitSphere * settings.planetRadius;
