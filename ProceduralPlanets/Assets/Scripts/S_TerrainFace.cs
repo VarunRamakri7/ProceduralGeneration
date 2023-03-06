@@ -12,13 +12,15 @@ public class S_TerrainFace
     private Vector3 axisA;
     private Vector3 axisB;
 
+    private S_ShapeGenerator ShapeGenerator;
+
     /// <summary>
     /// Parameterized Constructor
     /// </summary>
     /// <param name="mesh"></param>
     /// <param name="resolution"></param>
     /// <param name="localUp"></param>
-    public S_TerrainFace(Mesh mesh, int resolution, Vector3 localUp)
+    public S_TerrainFace(S_ShapeGenerator shapeGenerator, Mesh mesh, int resolution, Vector3 localUp)
     {
         this.mesh= mesh;
         this.resolution = resolution;
@@ -26,6 +28,8 @@ public class S_TerrainFace
         this.localUp = localUp;
         axisA = new Vector3(localUp.y, localUp.z, localUp.x);
         axisB = Vector3.Cross(localUp, axisA);
+
+        this.ShapeGenerator = shapeGenerator;
     }
 
     /// <summary>
@@ -46,7 +50,7 @@ public class S_TerrainFace
                 Vector2 percent = new Vector2(x, y) / (resolution - 1);
                 Vector3 pointOnUnitCube = localUp + (percent.x - 0.5f) * 2.0f * axisA + (percent.y - 0.5f) * 2.0f * axisB;
                 Vector3 pointOnUnitSphere = pointOnUnitCube.normalized;
-                vertices[index] = pointOnUnitSphere;
+                vertices[index] = ShapeGenerator.CalculatePointOnPlanet(pointOnUnitSphere);
 
                 // Make triangles
                 if (x != (resolution - 1) && y != (resolution - 1))
