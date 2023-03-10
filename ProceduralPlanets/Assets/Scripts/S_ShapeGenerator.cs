@@ -6,8 +6,9 @@ public class S_ShapeGenerator
 {
     private S_ShapeSettings settings;
     private S_INoiseFilter[] noiseFilters;
+    public S_MinMax elevationMinMax;
 
-    public S_ShapeGenerator(S_ShapeSettings settings)
+    public void UpdateSettings(S_ShapeSettings settings)
     {
         this.settings = settings;
 
@@ -16,6 +17,8 @@ public class S_ShapeGenerator
         {
             noiseFilters[i] = S_NoiseFilterFactory.CreateNosieFilter(settings.noiseLayers[i].noiseSettings);
         }
+
+        elevationMinMax = new S_MinMax();
     }
 
     /// <summary>
@@ -46,6 +49,10 @@ public class S_ShapeGenerator
             }
         }
 
-        return pointOnUnitSphere * settings.planetRadius * (1.0f + elevation);
+        elevation = settings.planetRadius * (1.0f + elevation);
+
+        elevationMinMax.AddValue(elevation);
+
+        return pointOnUnitSphere * elevation;
     }
 }

@@ -28,15 +28,17 @@ public class S_Planet : MonoBehaviour
     [HideInInspector]
     public bool colorSettingsFoldout;
 
+    private S_ShapeGenerator shapeGenerator = new S_ShapeGenerator();
+    private S_ColorGenerator colorGenerator = new S_ColorGenerator();
+
     [SerializeField, HideInInspector]
     private MeshFilter[] meshFilters;
     private S_TerrainFace[] terrainFaces;
 
-    private S_ShapeGenerator shapeGenerator;
-
     public void Init()
     {
-        shapeGenerator = new S_ShapeGenerator(shapeSettings);
+        shapeGenerator.UpdateSettings(shapeSettings);
+        colorGenerator.UpdateSettings(colorSettings);
 
         if (meshFilters == null || meshFilters.Length == 0)
         {
@@ -114,6 +116,8 @@ public class S_Planet : MonoBehaviour
                 terrainFaces[i].ConstructMesh();
             }
         }
+
+        colorGenerator.UpdateElevation(shapeGenerator.elevationMinMax);
     }
 
     /// <summary>
@@ -121,9 +125,6 @@ public class S_Planet : MonoBehaviour
     /// </summary>
     public void GenerateColors()
     {
-        foreach(MeshFilter m in meshFilters)
-        {
-            m.GetComponent<MeshRenderer>().sharedMaterial.color = colorSettings.planetColor;
-        }
+        colorGenerator.UpdateColors();
     }
 }
