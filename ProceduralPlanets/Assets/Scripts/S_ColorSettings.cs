@@ -15,6 +15,8 @@ public class S_ColorSettings : ScriptableObject
         public S_NoiseSettings noise;
         public float noiseOffset;
         public float noiseStrength;
+        [Range(0.0f, 1.0f)]
+        public float blendAmount;
 
         [System.Serializable]
         public class Biome
