@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.09426642, g: 0.08322256, b: 0.08643972, a: 1}
+  m_IndirectSpecularColor: {r: 0.24203467, g: 0.09006191, b: 0.115241, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -241,6 +241,59 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!1 &1269778809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1269778811}
+  - component: {fileID: 1269778810}
+  m_Layer: 0
+  m_Name: Skybox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1269778810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269778809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30c4f503c00358f498e117e6fb9b79bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skyboxes:
+  - {fileID: 2100000, guid: bc226b6d7a4085648a61b89d9c428abd, type: 2}
+  - {fileID: 2100000, guid: 665acd7e07b8fce4fb23d27ce4495dd1, type: 2}
+  - {fileID: 2100000, guid: 8c76d46d8e7edf241b25746c958c18c8, type: 2}
+  - {fileID: 2100000, guid: c1e9ea02f5248f94f93c17391d006618, type: 2}
+  - {fileID: 2100000, guid: 79461ac1e5a73ff4c908f25a03bb2eae, type: 2}
+  - {fileID: 2100000, guid: 0cc7ef8b9d2c0174ba070ee8ce3c490f, type: 2}
+  - {fileID: 2100000, guid: 8a3a1f014763af645a2fafc3b1ae8de5, type: 2}
+  - {fileID: 2100000, guid: f6f7951233f42af408cc63083b8e5e62, type: 2}
+--- !u!4 &1269778811
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269778809}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1469600363
 GameObject:
   m_ObjectHideFlags: 0
