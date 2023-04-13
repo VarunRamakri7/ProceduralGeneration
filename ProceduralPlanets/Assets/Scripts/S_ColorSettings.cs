@@ -29,4 +29,14 @@ public class S_ColorSettings : ScriptableObject
             public float tintPercent;
         }
     }
+
+    /// <summary>
+    /// Copy constructor
+    /// </summary>
+    /// <param name="settings">Settings to copy</param>
+    public S_ColorSettings(S_ColorSettings settings)
+    {
+        planetMaterial = settings.planetMaterial;
+        biomeColorSettings = settings.biomeColorSettings;
+    }
 }
