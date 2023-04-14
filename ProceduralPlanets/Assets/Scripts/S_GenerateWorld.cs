@@ -49,9 +49,9 @@ public class S_GenerateWorld : MonoBehaviour
         planet.AddComponent<S_Planet>(); // Add planet script
 
         // Set initial settings
+        planet.GetComponent<S_Planet>().resolution = 64;
         planet.GetComponent<S_Planet>().shapeSettings = shapeSettingsList[numPlanets];
         planet.GetComponent<S_Planet>().colorSettings = colorSettingsList[numPlanets];
-
         generatePlanet.GeneratePlanet(planet.GetComponent<S_Planet>()); // Generate planet
 
         planet.transform.parent = transform; // Set parent
