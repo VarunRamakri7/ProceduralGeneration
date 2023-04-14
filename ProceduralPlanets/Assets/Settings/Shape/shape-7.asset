@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8db3602350c99e4b8b9f54371c6e2ad, type: 3}
-  m_Name: shape
+  m_Name: shape-7
   m_EditorClassIdentifier: 
-  planetRadius: 5
+  planetRadius: 2.8500206
   noiseLayers:
   - enabled: 1
     useFirstLayerAsMask: 0
     noiseSettings:
       filterType: 0
       simpleNoiseSettings:
-        strength: 0.3
+        strength: -0.4323288
         numLayers: 3
-        baseRoughness: 0.85
-        roughness: 0.73
-        persistance: 0.33
-        center: {x: 0, y: 0, z: 0}
-        minValue: 0.69
+        baseRoughness: 4.025781
+        roughness: 0.107310735
+        persistance: 0.1440978
+        center: {x: 0.6854311, y: 0.9319757, z: 0.29273373}
+        minValue: 0.6570931
       rigidNoiseSettings:
         strength: 1
         numLayers: 1
@@ -40,13 +40,13 @@ MonoBehaviour:
     noiseSettings:
       filterType: 0
       simpleNoiseSettings:
-        strength: 3.15
+        strength: -0.2928125
         numLayers: 3
-        baseRoughness: 1.46
-        roughness: 2.64
-        persistance: 0.37
-        center: {x: 0, y: 0, z: 0}
-        minValue: 0.5
+        baseRoughness: 4.8510656
+        roughness: 0.9256477
+        persistance: 0.1093912
+        center: {x: 0.6797726, y: 0.17334616, z: 0.96947074}
+        minValue: 0.7385026
       rigidNoiseSettings:
         strength: 1
         numLayers: 1
@@ -59,15 +59,15 @@ MonoBehaviour:
   - enabled: 1
     useFirstLayerAsMask: 1
     noiseSettings:
-      filterType: 1
+      filterType: 0
       simpleNoiseSettings:
-        strength: 1
-        numLayers: 1
-        baseRoughness: 1
-        roughness: 2
-        persistance: 0.5
-        center: {x: 0, y: 0, z: 0}
-        minValue: 0
+        strength: -0.43240213
+        numLayers: 3
+        baseRoughness: 4.0745425
+        roughness: 0.9191215
+        persistance: 0.12963726
+        center: {x: 0.7331197, y: 0.54567605, z: 0.7758336}
+        minValue: 0.6410166
       rigidNoiseSettings:
         strength: 2.2
         numLayers: 3
