@@ -38,12 +38,29 @@ public class S_GeneratePlanet : MonoBehaviour
 
         // Reset planet properties
         planet.resolution = 64;
-        //planet.autoUpdate = false;
         planet.shapeSettings = shapeSettings;
         planet.colorSettings = colorSettings;
         planet.GeneratePlanet();
+    }
 
-        //planet.enabled = true; // Enable script
+    public void GeneratePlanet(S_Planet planetScript)
+    {
+        // Generate settings
+        GenerateShapeSettings();
+        planetScript.shapeSettings = new S_ShapeSettings(shapeSettings);
+
+        GenerateColorSettings();
+        planetScript.colorSettings = new S_ColorSettings(colorSettings);
+
+        // Reset planet properties
+        planetScript.resolution = 64;
+        planetScript.shapeSettings = shapeSettings;
+        planetScript.colorSettings = colorSettings;
+        planetScript.GeneratePlanet();
+
+        // Reset settings
+        shapeSettings = new S_ShapeSettings(god.shapeSettings);
+        colorSettings = new S_ColorSettings(god.colorSettings);
     }
 
     /// <summary>
@@ -111,5 +128,15 @@ public class S_GeneratePlanet : MonoBehaviour
             biome.startHeight = Random.Range(0.1f, 0.3f);
             biome.tintPercent = Random.Range(0.25f, 0.85f);
         }
+    }
+
+    /// <summary>
+    /// Reset settings to default
+    /// </summary>
+    public void ResetSettings()
+    {
+        // Copy god's settings
+        shapeSettings = new S_ShapeSettings(god.shapeSettings);
+        colorSettings = new S_ColorSettings(god.colorSettings);
     }
 }
