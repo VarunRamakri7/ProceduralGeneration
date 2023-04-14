@@ -9,6 +9,8 @@ public class S_GeneratePlanet : MonoBehaviour
     private S_Planet god;
     [SerializeField]
     private List<Gradient> gradients;
+    [SerializeField]
+    private Shader planetShader;
 
     private S_ShapeSettings shapeSettings;
     private S_ColorSettings colorSettings;
@@ -49,17 +51,17 @@ public class S_GeneratePlanet : MonoBehaviour
     /// <param name="planetScript">Script to generate plant for</param>
     public void GeneratePlanet(S_Planet planetScript)
     {
-        // Create new settings instances
+        // Set settings instances
+        Material temp = new Material(planetShader);
+        planetScript.colorSettings.planetMaterial = temp;
         shapeSettings = planetScript.shapeSettings;
         colorSettings = planetScript.colorSettings;
 
         // Generate settings
         GenerateShapeSettings();
-
         GenerateColorSettings();
 
         // Reset planet properties
-        planetScript.resolution = 64;
         planetScript.shapeSettings = shapeSettings;
         planetScript.colorSettings = colorSettings;
         planetScript.GeneratePlanet();
@@ -95,7 +97,7 @@ public class S_GeneratePlanet : MonoBehaviour
         colorSettings.biomeColorSettings.noiseOffset = Random.Range(2.0f, 5.0f);
         colorSettings.biomeColorSettings.blendAmount = Random.Range(0.25f, 1.0f);
         
-        colorSettings.biomeColorSettings.noise.filterType = (S_NoiseSettings.FilterType)Random.Range(0, 1);
+        colorSettings.biomeColorSettings.noise.filterType = (S_NoiseSettings.FilterType)Random.Range(0, 2);
         switch(colorSettings.biomeColorSettings.noise.filterType)
         {
             case S_NoiseSettings.FilterType.SIMPLE:
@@ -126,7 +128,7 @@ public class S_GeneratePlanet : MonoBehaviour
         foreach(S_ColorSettings.BiomeColorSettings.Biome biome in colorSettings.biomeColorSettings.biomes)
         {
             biome.gradient = gradients[Random.Range(0, gradients.Count)];
-            biome.gradient.mode = (Random.Range(0, 1) == 0) ? GradientMode.Fixed : GradientMode.Blend;
+            biome.gradient.mode = GradientMode.Blend;// (Random.Range(0, 2) == 0) ? GradientMode.Fixed : GradientMode.Blend;
 
             biome.tint = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f));
             biome.startHeight = Random.Range(0.1f, 0.3f);
