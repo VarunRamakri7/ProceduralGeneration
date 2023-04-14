@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8db3602350c99e4b8b9f54371c6e2ad, type: 3}
   m_Name: shape-1
   m_EditorClassIdentifier: 
-  planetRadius: 4.490246
+  planetRadius: 3.5931687
   noiseLayers:
   - enabled: 1
     useFirstLayerAsMask: 0
     noiseSettings:
       filterType: 0
       simpleNoiseSettings:
-        strength: -0.14644998
+        strength: -0.36415234
         numLayers: 3
-        baseRoughness: 3.5902493
-        roughness: 0.21560869
-        persistance: 0.12896563
-        center: {x: 0.9291954, y: 0.24921834, z: 0.8710482}
-        minValue: 0.6734257
+        baseRoughness: 2.9664438
+        roughness: 0.11019497
+        persistance: 0.11089287
+        center: {x: 0.6657897, y: 0.5052121, z: 0.0028522015}
+        minValue: 0.6435324
       rigidNoiseSettings:
         strength: 1
         numLayers: 1
@@ -40,13 +40,13 @@ MonoBehaviour:
     noiseSettings:
       filterType: 0
       simpleNoiseSettings:
-        strength: -0.2599728
+        strength: 0.28918314
         numLayers: 3
-        baseRoughness: 4.528521
-        roughness: 0.9778012
-        persistance: 0.19431926
-        center: {x: 0.51024777, y: 0.48510092, z: 0.80519176}
-        minValue: 0.6776837
+        baseRoughness: 3.0935032
+        roughness: 0.75155944
+        persistance: 0.12878127
+        center: {x: 0.23287141, y: 0.023386598, z: 0.26672906}
+        minValue: 0.7907231
       rigidNoiseSettings:
         strength: 1
         numLayers: 1
@@ -61,13 +61,13 @@ MonoBehaviour:
     noiseSettings:
       filterType: 0
       simpleNoiseSettings:
-        strength: -0.3451659
+        strength: 0.29007426
         numLayers: 3
-        baseRoughness: 4.772287
-        roughness: 0.38340506
-        persistance: 0.15848035
-        center: {x: 0.509528, y: 0.040490985, z: 0.33209044}
-        minValue: 0.5033271
+        baseRoughness: 3.4806077
+        roughness: 0.34639144
+        persistance: 0.15123332
+        center: {x: 0.5528608, y: 0.38658804, z: 0.403951}
+        minValue: 0.7891475
       rigidNoiseSettings:
         strength: 2.2
         numLayers: 3
