@@ -8,6 +8,10 @@ public class S_GenerateWorld : MonoBehaviour
     private S_GeneratePlanet generatePlanet;
     [SerializeField]
     private List<GameObject> planets;
+    [SerializeField]
+    private List<S_ColorSettings> colorSettingsList;
+    [SerializeField]
+    private List<S_ShapeSettings> shapeSettingsList;
 
     private GameObject world;
     private int numPlanets = 0;
@@ -43,6 +47,11 @@ public class S_GenerateWorld : MonoBehaviour
         GameObject planet = new GameObject("planet-" + numPlanets);
 
         planet.AddComponent<S_Planet>(); // Add planet script
+
+        // Set initial settings
+        planet.GetComponent<S_Planet>().shapeSettings = shapeSettingsList[numPlanets];
+        planet.GetComponent<S_Planet>().colorSettings = colorSettingsList[numPlanets];
+
         generatePlanet.GeneratePlanet(planet.GetComponent<S_Planet>()); // Generate planet
 
         planet.transform.parent = transform; // Set parent
@@ -66,8 +75,13 @@ public class S_GenerateWorld : MonoBehaviour
         {
             if (isSeen(planet.transform.position))
             {
-                planets.Remove(planet); // Remove first planet
-                Destroy(planet); // Destroy first planet
+                planets.Remove(planet); // Remove planet
+
+                // Destroy settings
+                Destroy(planet.GetComponent<S_Planet>().shapeSettings);
+                Destroy(planet.GetComponent<S_Planet>().colorSettings);
+
+                Destroy(planet); // Destroy planet
 
                 numPlanets--;
             }

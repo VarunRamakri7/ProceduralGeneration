@@ -43,14 +43,20 @@ public class S_GeneratePlanet : MonoBehaviour
         planet.GeneratePlanet();
     }
 
+    /// <summary>
+    /// Generate planet for the given script
+    /// </summary>
+    /// <param name="planetScript">Script to generate plant for</param>
     public void GeneratePlanet(S_Planet planetScript)
     {
+        // Create new settings instances
+        shapeSettings = planetScript.shapeSettings;
+        colorSettings = planetScript.colorSettings;
+
         // Generate settings
         GenerateShapeSettings();
-        planetScript.shapeSettings = new S_ShapeSettings(shapeSettings);
 
         GenerateColorSettings();
-        planetScript.colorSettings = new S_ColorSettings(colorSettings);
 
         // Reset planet properties
         planetScript.resolution = 64;
@@ -58,9 +64,7 @@ public class S_GeneratePlanet : MonoBehaviour
         planetScript.colorSettings = colorSettings;
         planetScript.GeneratePlanet();
 
-        // Reset settings
-        shapeSettings = new S_ShapeSettings(god.shapeSettings);
-        colorSettings = new S_ColorSettings(god.colorSettings);
+        ResetSettings();
     }
 
     /// <summary>
