@@ -2095,5 +2095,9 @@ PrefabInstance:
       propertyPath: god
       value: 
       objectReference: {fileID: 1140600437}
+    - target: {fileID: 8818919438837398255, guid: 896fddc855e92304d874a76113e1134d, type: 3}
+      propertyPath: planetShader
+      value: 
+      objectReference: {fileID: -6465566751694194690, guid: f213d903cb5121b478157b4893904728, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 896fddc855e92304d874a76113e1134d, type: 3}
