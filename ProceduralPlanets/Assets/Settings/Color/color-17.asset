@@ -17,70 +17,6 @@ MonoBehaviour:
     biomes:
     - gradient:
         serializedVersion: 2
-        key0: {r: 0.46569067, g: 0.8584906, b: 0.5146347, a: 1}
-        key1: {r: 0.6132076, g: 0.48974824, b: 0.29214135, a: 1}
-        key2: {r: 0, g: 0, b: 0, a: 0}
-        key3: {r: 0, g: 0, b: 0, a: 0}
-        key4: {r: 0, g: 0, b: 0, a: 0}
-        key5: {r: 0, g: 0, b: 0, a: 0}
-        key6: {r: 0, g: 0, b: 0, a: 0}
-        key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 0
-        ctime1: 65535
-        ctime2: 0
-        ctime3: 0
-        ctime4: 0
-        ctime5: 0
-        ctime6: 0
-        ctime7: 0
-        atime0: 0
-        atime1: 65535
-        atime2: 0
-        atime3: 0
-        atime4: 0
-        atime5: 0
-        atime6: 0
-        atime7: 0
-        m_Mode: 1
-        m_NumColorKeys: 2
-        m_NumAlphaKeys: 2
-      tint: {r: 0.605324, g: 0.99265397, b: 0.2923935, a: 1}
-      startHeight: 0.22704613
-      tintPercent: 0.8248337
-    - gradient:
-        serializedVersion: 2
-        key0: {r: 0.3254717, g: 1, b: 0.96120536, a: 1}
-        key1: {r: 0.8773585, g: 0.28555536, b: 0.64516383, a: 1}
-        key2: {r: 0, g: 0, b: 0, a: 0}
-        key3: {r: 0, g: 0, b: 0, a: 0}
-        key4: {r: 0, g: 0, b: 0, a: 0}
-        key5: {r: 0, g: 0, b: 0, a: 0}
-        key6: {r: 0, g: 0, b: 0, a: 0}
-        key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 0
-        ctime1: 65535
-        ctime2: 0
-        ctime3: 0
-        ctime4: 0
-        ctime5: 0
-        ctime6: 0
-        ctime7: 0
-        atime0: 0
-        atime1: 65535
-        atime2: 0
-        atime3: 0
-        atime4: 0
-        atime5: 0
-        atime6: 0
-        atime7: 0
-        m_Mode: 1
-        m_NumColorKeys: 2
-        m_NumAlphaKeys: 2
-      tint: {r: 0.8229095, g: 0.77105236, b: 0.58101004, a: 1}
-      startHeight: 0.2929342
-      tintPercent: 0.44997638
-    - gradient:
-        serializedVersion: 2
         key0: {r: 0.2216981, g: 0.28466845, b: 1, a: 1}
         key1: {r: 0.5990566, g: 1, b: 0.9543437, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
@@ -105,31 +41,95 @@ MonoBehaviour:
         atime5: 0
         atime6: 0
         atime7: 0
-        m_Mode: 1
+        m_Mode: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      tint: {r: 0.66479707, g: 0.09588492, b: 0.5767353, a: 1}
-      startHeight: 0.13772087
-      tintPercent: 0.6071224
+      tint: {r: 0.047972202, g: 0.72189164, b: 0.8868258, a: 1}
+      startHeight: 0.27884892
+      tintPercent: 0.37887013
+    - gradient:
+        serializedVersion: 2
+        key0: {r: 0.33490568, g: 1, b: 0.6833826, a: 1}
+        key1: {r: 0.52617747, g: 0.2950338, b: 0.735849, a: 1}
+        key2: {r: 0, g: 0, b: 0, a: 0}
+        key3: {r: 0, g: 0, b: 0, a: 0}
+        key4: {r: 0, g: 0, b: 0, a: 0}
+        key5: {r: 0, g: 0, b: 0, a: 0}
+        key6: {r: 0, g: 0, b: 0, a: 0}
+        key7: {r: 0, g: 0, b: 0, a: 0}
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_Mode: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      tint: {r: 0.4892537, g: 0.4760564, b: 0.34235328, a: 1}
+      startHeight: 0.2820546
+      tintPercent: 0.57217646
+    - gradient:
+        serializedVersion: 2
+        key0: {r: 0.5364977, g: 1, b: 0.3726415, a: 1}
+        key1: {r: 0.6273585, g: 1, b: 0.9851042, a: 1}
+        key2: {r: 0, g: 0, b: 0, a: 0}
+        key3: {r: 0, g: 0, b: 0, a: 0}
+        key4: {r: 0, g: 0, b: 0, a: 0}
+        key5: {r: 0, g: 0, b: 0, a: 0}
+        key6: {r: 0, g: 0, b: 0, a: 0}
+        key7: {r: 0, g: 0, b: 0, a: 0}
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_Mode: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      tint: {r: 0.9718983, g: 0.06711006, b: 0.95470107, a: 1}
+      startHeight: 0.100093395
+      tintPercent: 0.44680035
     noise:
       filterType: 0
       simpleNoiseSettings:
-        strength: 0.6402953
+        strength: 0.34970316
         numLayers: 3
-        baseRoughness: 0.47260448
-        roughness: 0.71284056
-        persistance: 0.17964074
-        center: {x: 0.39015776, y: 0.021449327, z: 0.90420663}
-        minValue: 0.59272254
+        baseRoughness: 0.1811762
+        roughness: 0.45411366
+        persistance: 0.2096261
+        center: {x: 0.18730044, y: 0.9253857, z: 0.9019278}
+        minValue: 0.31764492
       rigidNoiseSettings:
-        strength: 1
-        numLayers: 1
-        baseRoughness: 1
-        roughness: 2
-        persistance: 0.5
-        center: {x: 0, y: 0, z: 0}
-        minValue: 0
-        weightMultiplier: 0.8
-    noiseOffset: 4.65068
-    noiseStrength: 0.3352919
-    blendAmount: 0.7980109
+        strength: 0.48292127
+        numLayers: 3
+        baseRoughness: 0.1955964
+        roughness: 0.65358
+        persistance: 0.1843213
+        center: {x: 0.24113798, y: 0.0029953718, z: 0.5711165}
+        minValue: 0.4245882
+        weightMultiplier: 0.52700096
+    noiseOffset: 3.5299177
+    noiseStrength: 0.4726638
+    blendAmount: 0.33285505
