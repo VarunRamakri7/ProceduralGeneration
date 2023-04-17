@@ -60,6 +60,7 @@ public class S_GenerateWorld : MonoBehaviour
         Vector3 position = new Vector3(Random.Range(-35.0f, 35.0f),
             Random.Range(Camera.main.transform.position.y - 20.0f, Camera.main.transform.position.y + 20.0f),
             Random.Range(10.0f, 30.0f));
+        // TODO: Check spawn position against previous planets
         planet.transform.localPosition = position;
 
         planets.Add(planet); // Add new planet to list
