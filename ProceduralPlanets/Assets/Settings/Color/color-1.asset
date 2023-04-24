@@ -44,13 +44,13 @@ MonoBehaviour:
         m_Mode: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      tint: {r: 0.99317074, g: 0.46420807, b: 0.8964468, a: 1}
-      startHeight: 0.16048917
-      tintPercent: 0.33378842
+      tint: {r: 0.9869019, g: 0.1349783, b: 0.083826065, a: 1}
+      startHeight: 0.12888427
+      tintPercent: 0.70089364
     - gradient:
         serializedVersion: 2
-        key0: {r: 1, g: 0.9846728, b: 0.3443396, a: 1}
-        key1: {r: 0.3915094, g: 0.528951, b: 1, a: 1}
+        key0: {r: 0.8584906, g: 0.376602, b: 0.81428045, a: 1}
+        key1: {r: 0.25, g: 1, b: 0.29093605, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -65,9 +65,9 @@ MonoBehaviour:
         ctime5: 0
         ctime6: 0
         ctime7: 0
-        atime0: 0
-        atime1: 65535
-        atime2: 65535
+        atime0: 15227
+        atime1: 37779
+        atime2: 0
         atime3: 0
         atime4: 0
         atime5: 0
@@ -76,9 +76,9 @@ MonoBehaviour:
         m_Mode: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      tint: {r: 0.84059215, g: 0.8936037, b: 0.79284716, a: 1}
-      startHeight: 0.17723338
-      tintPercent: 0.4464572
+      tint: {r: 0.8701832, g: 0.99428296, b: 0.8827406, a: 1}
+      startHeight: 0.24996914
+      tintPercent: 0.5861942
     - gradient:
         serializedVersion: 2
         key0: {r: 1, g: 0, b: 0, a: 1}
@@ -108,19 +108,19 @@ MonoBehaviour:
         m_Mode: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      tint: {r: 0.15115583, g: 0.7011683, b: 0.73687685, a: 1}
-      startHeight: 0.23860902
-      tintPercent: 0.77813894
+      tint: {r: 0.16158009, g: 0.13928878, b: 0.45361298, a: 1}
+      startHeight: 0.21943486
+      tintPercent: 0.28974962
     noise:
       filterType: 0
       simpleNoiseSettings:
-        strength: 0.6989463
+        strength: 0.4034381
         numLayers: 3
-        baseRoughness: 0.5805086
-        roughness: 0.7858007
-        persistance: 0.25911716
-        center: {x: 0.1682992, y: 0.6436653, z: 0.16168189}
-        minValue: 0.68315464
+        baseRoughness: 0.1979267
+        roughness: 0.7578601
+        persistance: 0.10273362
+        center: {x: 0.29335052, y: 0.14622533, z: 0.93142295}
+        minValue: 0.4778934
       rigidNoiseSettings:
         strength: 0.2800137
         numLayers: 3
@@ -130,6 +130,6 @@ MonoBehaviour:
         center: {x: 0.29921347, y: 0.60569483, z: 0.13158834}
         minValue: 0.6379964
         weightMultiplier: 0.5577692
-    noiseOffset: 4.2881517
-    noiseStrength: 0.32339323
-    blendAmount: 0.60443777
+    noiseOffset: 3.294805
+    noiseStrength: 0.35394582
+    blendAmount: 0.63857245
