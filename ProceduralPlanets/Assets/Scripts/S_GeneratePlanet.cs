@@ -78,7 +78,7 @@ public class S_GeneratePlanet : MonoBehaviour
         foreach(NoiseLayer noiseLayer in shapeSettings.noiseLayers)
         {
             noiseLayer.noiseSettings.filterType = S_NoiseSettings.FilterType.SIMPLE;
-            noiseLayer.noiseSettings.simpleNoiseSettings.strength = Random.Range(-0.5f, 0.3f);
+            noiseLayer.noiseSettings.simpleNoiseSettings.strength = Random.Range(-0.1f, 0.3f);
             noiseLayer.noiseSettings.simpleNoiseSettings.numLayers = 3;
             noiseLayer.noiseSettings.simpleNoiseSettings.baseRoughness = Random.Range(0.1f, 5.0f);
             noiseLayer.noiseSettings.simpleNoiseSettings.roughness = Random.Range(0.1f, 1.0f);
